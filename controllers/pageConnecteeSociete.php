@@ -4,7 +4,8 @@
 
 require "../views/pageConnecteeSociete.phtml";
 
-var_dump($_POST);
+session_start();
+var_dump($_SESSION);
 
 
 
