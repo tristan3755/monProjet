@@ -6,18 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-<?php var_dump($_POST); ?>
-<form action="../controllers/inscriptionSociete.php" method="post"> 
+    
 
-<input type="text" name="nom" placeholder="Nom de votre société"> 
+<form action='../controllers/inscriptionVendeur.php' method="$_POST">
 
-<input type="text" name="adresse" placeholder="adresse de votre société"> 
+<input type="text" placeholder="inscrivez le nom de votre employé ">
 
-<input type="text" name="tel" placeholder="téléphone de votre société"> 
+<input type="text" placeholder="inscrivez le prénom de votre employé ">
 
-<input type="password" name="password" placeholder="entrez un mot de passe"> 
-
-<input type="submit">
+<input type="text" placeholder="inscrivez le numéro de référence de votre employé ">
 
 
 </form>
