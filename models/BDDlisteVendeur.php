@@ -3,7 +3,7 @@
 session_start();
 if(!array_key_exists('societeId',$_SESSION)){
 	header('location:../controllers/connexion.php');
-	exit;
+    exit;
 }
 
 
@@ -23,10 +23,8 @@ function vendeurs($idSoc){
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
 		]
-	);
-
-
-
+    );
+    
 $query='SELECT * FROM vendeur where id_societes=:idsoc';
 $sth=$dbh ->prepare($query);
 $sth->bindValue(':idsoc',$idSoc,PDO::PARAM_STR);

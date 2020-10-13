@@ -7,5 +7,29 @@
 </head>
 <body>
     
+<?php if(count($listeVendeur)>0): ?>
+<section>
+
+
+
+<?php foreach ($listeVendeur as $vendeur)?>
+
+<h1>Nom:<?=($vendeur)['nom_vendeur']?></h1>
+
+<h2>Prénom:<?=($vendeur)['prenom_vendeur']?></h2>
+
+<h3>Reférence:<?=($vendeur)['ref_vendeur']?></h3>
+
+<p>email:<?=($vendeur)['email']?></p>
+
+<p>téléphone:<?=($vendeur)['telephone_vendeur']?></p>
+
+
+
+
+</section>
+
+<?php endif ?>
+
 </body>
 </html>
