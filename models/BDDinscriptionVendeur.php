@@ -25,7 +25,7 @@ function inscriptionVendeur($nom,$prenom,$ref,$email,$tel,$password,$idSoc){
 	);
 
 
-$query='INSERT INTO nom_vendeur,prenom_vendeur,ref_vendeur,email,telephone_vendeur,hashedPassword,id_societes values :nom,:prenom,:ref,:email,:telephone,:hashedPassword,:idSoc';
+$query='INSERT INTO vendeur (nom_vendeur,prenom_vendeur,ref_vendeur,email,telephone_vendeur,hashedPassword,id_societes) VALUES (:nom,:prenom,:ref,:email,:telephone,:hashedPassword,:idSoc)';
 $sth=$dbh ->prepare($query);
 $sth->bindValue(':nom',$nom,PDO::PARAM_STR);
 $sth->bindValue(':prenom',$prenom,PDO::PARAM_STR);
