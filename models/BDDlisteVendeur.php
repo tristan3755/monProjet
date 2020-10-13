@@ -27,7 +27,7 @@ function vendeurs($idSoc){
 
 
 
-$query='SELECT * FROM vendeur where devis.id_societes=:idsoc';
+$query='SELECT * FROM vendeur where id_societes=:idsoc';
 $sth=$dbh ->prepare($query);
 $sth->bindValue(':idsoc',$idSoc,PDO::PARAM_STR);
 $sth->execute();
@@ -36,10 +36,5 @@ $listeVendeur=$sth->fetchAll();
 
 return $listeVendeur;
 }
-
-
-
-
-
 
 ?>
