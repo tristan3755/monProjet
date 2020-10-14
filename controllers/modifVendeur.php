@@ -9,6 +9,7 @@ modif($_GET['id'],$_POST['nom'],$_POST['prenom'],$_POST['ref'],$_POST['email'],$
 
 }
 var_dump($_GET);
+var_dump($_SESSION);
 
 
 include "../views/modifVendeur.phtml"
