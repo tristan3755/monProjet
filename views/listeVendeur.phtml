@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
-<?php if(count($listeVendeur)>0): ?>
 
-    <?php foreach ($listeVendeur as $vendeur): ?>
+    <?php if (count($listeVendeur) > 0) : ?>
 
-
-    
-<section>
+        <?php foreach ($listeVendeur as $vendeur) : ?>
 
 
 
-
-
-<h1>Nom:<?=($vendeur)['nom_vendeur']?></h1>
-
-<h2>Prénom:<?=($vendeur)['prenom_vendeur']?></h2>
-
-<h3>Référence:<?=($vendeur)['ref_vendeur']?></h3>
-
-<p>email:<?=($vendeur)['email']?></p>
-
-<p>téléphone:<?=($vendeur)['telephone_vendeur']?></p>
+            <section>
 
 
 
-<a href="../controllers/modifVendeur.php?id=<?=intval($vendeur['id_vendeur'])?>">modifier les informations du vendeur</a>
 
 
-<a href="../controllers/suppVendeur.php?id=<?=intval($vendeur['id_vendeur'])?>">Supprimer le vendeur</a>
+                <h1>Nom:<?= ($vendeur)['nom_vendeur'] ?></h1>
+
+                <h2>Prénom:<?= ($vendeur)['prenom_vendeur'] ?></h2>
+
+                <h3>Référence:<?= ($vendeur)['ref_vendeur'] ?></h3>
+
+                <p>email:<?= ($vendeur)['email'] ?></p>
+
+                <p>téléphone:<?= ($vendeur)['telephone_vendeur'] ?></p>
 
 
-<?php endforeach; ?>
 
-</section>
+                <a href="../controllers/modifVendeur.php?id=<?= intval($vendeur['id_vendeur']) ?>">modifier les informations du vendeur</a>
 
-<?php endif; ?>
+
+                <a href="../controllers/suppVendeur.php?id=<?= intval($vendeur['id_vendeur']) ?>">Supprimer le vendeur</a>
+
+
+            <?php endforeach; ?>
+
+            </section>
+
+        <?php endif; ?>
 
 
 
@@ -49,4 +51,5 @@
 
 
 </body>
+
 </html>
