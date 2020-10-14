@@ -8,11 +8,16 @@
 <body>
     
 <?php if(count($listeVendeur)>0): ?>
+
+    <?php foreach ($listeVendeur as $vendeur): ?>
+
+
+    
 <section>
 
 
 
-<?php foreach ($listeVendeur as $vendeur)?>
+
 
 <h1>Nom:<?=($vendeur)['nom_vendeur']?></h1>
 
@@ -26,17 +31,22 @@
 
 
 
-<button value="">Modifier les informations du vendeur </button>
+<a href="../controllers/modifVendeur.php?id=<?=intval($vendeur['id_vendeur'])?>">modifier les informations du vendeur</a>
 
 
 <a href="../controllers/suppVendeur.php?id=<?=intval($vendeur['id_vendeur'])?>">Supprimer le vendeur</a>
 
 
-
+<?php endforeach; ?>
 
 </section>
 
-<?php endif ?>
+<?php endif; ?>
+
+
+
+
+
 
 </body>
 </html>
