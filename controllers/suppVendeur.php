@@ -2,7 +2,7 @@
 
 include "../models/BDDsuppVendeur.php";
 
-$idSupp=supp($_GET['id']);
+supp($_GET['id']);
 
 var_dump($_GET)
 
