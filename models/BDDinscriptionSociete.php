@@ -1,11 +1,11 @@
 <?php
 
 
-define('DATABASE_DSN','mysql:host=localhost;dbname=monprojet;charset=utf8');
-define('DATABASE_USERNAME','root');
-define('DATABASE_PASSWORD', '');
-
 function connectSociete(string $nom,$adresse,$tel,$password){
+
+	define('DATABASE_DSN','mysql:host=localhost;dbname=monprojet;charset=utf8');
+	define('DATABASE_USERNAME','root');
+	define('DATABASE_PASSWORD', '');
 
 
     $dbh = new PDO

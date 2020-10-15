@@ -3,7 +3,7 @@
 require "../models/BDDmodifVendeur.php";
 
 if(!empty($_POST) && !empty($_GET)){
-
+echo 'coucou';
 modif($_GET['id'],$_POST['nom'],$_POST['prenom'],$_POST['ref'],$_POST['email'],$_POST['telephone'],password_hash($_POST['password'].'nader',PASSWORD_BCRYPT));
 
 

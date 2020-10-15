@@ -6,12 +6,15 @@ if(!array_key_exists('societeId',$_SESSION)){
 	exit;
 }
 
-define('DATABASE_DSN','mysql:host=localhost;dbname=monprojet;charset=utf8');
-define('DATABASE_USERNAME', 'root');
-define('DATABASE_PASSWORD', '');
+
 
 
 function inscriptionVendeur($nom,$prenom,$ref,$email,$tel,$password,$idSoc){
+
+
+	define('DATABASE_DSN','mysql:host=localhost;dbname=monprojet;charset=utf8');
+	define('DATABASE_USERNAME', 'root');
+	define('DATABASE_PASSWORD', '');
 
 	$dbh = new PDO
 	(
