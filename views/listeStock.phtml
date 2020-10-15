@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <?php if (count($listeStock) > 0) : ?>
+
+        <?php foreach ($listeStock as $stock) : ?>
+
+
+
+            <section>
+
+                <h1>Nom:<?= ($stock)['nom_Produit'] ?></h1>
+
+                <h2>Référence produit:<?= ($stock)['ref'] ?></h2>
+
+                <h3>prix unitaire:<?= ($stock)['prix_unitaire'] ?></h3>
+
+                <p>stock:<?= ($stock)['quantite_stock'] ?></p>
+
+
+              
+            <?php endforeach; ?>
+
+            </section>
+
+        <?php endif; ?>
+
+
+
+
+
+
+</body>
+
+</html>
