@@ -13,7 +13,7 @@ if(!empty($_POST)){
         session_start();
         $_SESSION['vendeurId']=$user['id_vendeur'];
        
-        header('location:../controllers/pageConnecteeSociete.php');
+        header('location:../controllers/pageConnecteeVendeur.php');
         exit;
 
     }
