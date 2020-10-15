@@ -26,6 +26,12 @@
                 <p>stock:<?= ($stock)['quantite_stock'] ?></p>
 
 
+                <a href="../controllers/modifStock.php?id=<?= intval($stock['id_stock']) ?>">modifier les informations du produit</a>
+
+
+                <a href="../controllers/suppStock.php?id=<?= intval($stock['id_stock']) ?>">Supprimer le produit</a>
+
+
               
             <?php endforeach; ?>
 
