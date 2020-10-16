@@ -12,7 +12,7 @@ define('DATABASE_DSN','mysql:host=localhost;dbname=monprojet;charset=utf8');
 define('DATABASE_USERNAME', 'root');
 define('DATABASE_PASSWORD', '');
 
-function listeStock($idSoc){
+function listeStock($id){
 
 	$dbh = new PDO
 	(
@@ -25,9 +25,9 @@ function listeStock($idSoc){
 		]
     );
     
-$query='SELECT * FROM stock where id_societes=:idsoc';
+$query='SELECT * FROM stock where id_societes=:id';
 $sth=$dbh ->prepare($query);
-$sth->bindValue(':idsoc',$idSoc,PDO::PARAM_STR);
+$sth->bindValue(':id',$id,PDO::PARAM_STR);
 $sth->execute();
 
 $listeStock=$sth->fetchAll();

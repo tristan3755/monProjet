@@ -45,4 +45,32 @@ function modif($id,$nom,$prenom,$tel,$ref,$email,$adresse,$ville,$codePostal){
 }
 
 
+function placeHolder($id){
+
+    $dbh = new PDO
+(
+    DATABASE_DSN,
+    DATABASE_USERNAME,
+    DATABASE_PASSWORD,
+    [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]
+);
+
+
+    $query='SELECT * FROM clients  WHERE id_clients = :id';
+    $sth=$dbh ->prepare($query);
+    $sth->bindValue(':id',$id,PDO::PARAM_INT);
+    $sth->execute();
+
+    $placeHolder=$sth->fetchAll();
+
+    return $placeHolder;
+
+}
+
+
+
+
 ?>
