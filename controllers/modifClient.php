@@ -1,6 +1,6 @@
 <?php
 
-require "../models/BDDmodifCleint.php";
+require "../models/BDDmodifClient.php";
 
 if(!empty($_POST) && !empty($_GET)){
 
