@@ -6,8 +6,6 @@ if(!array_key_exists('societeId',$_SESSION)){
     exit;
 }
 
-
-
 define('DATABASE_DSN','mysql:host=localhost;dbname=monprojet;charset=utf8');
 define('DATABASE_USERNAME', 'root');
 define('DATABASE_PASSWORD', '');
