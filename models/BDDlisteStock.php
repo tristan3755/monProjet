@@ -33,6 +33,7 @@ $sth->execute();
 $listeStock=$sth->fetchAll();
 
 return $listeStock;
+
 }
 
 ?>
