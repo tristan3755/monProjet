@@ -8,8 +8,13 @@ modif($_GET['id'],$_POST['nom'],$_POST['prenom'],$_POST['ref'],$_POST['email'],$
 
 
 }
+
+$placeHolder=holder($_GET['id']);
+
+
 var_dump($_GET);
 var_dump($_SESSION);
+var_dump($placeHolder);
 
 
 include "../views/modifVendeur.phtml"
