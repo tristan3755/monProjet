@@ -11,21 +11,21 @@
 
 <?php foreach($placeHolder as $holder) :?>
 
-<input type="text" name="nom" value="<?= $holder['nom']?>" placeholder="inserez le nom de votr client "> 
+<input type="text" name="nom" value="<?= htmlspecialchars($holder['nom'])?>" placeholder="inserez le nom de votr client "> 
 
-<input type="text" name="prenom" value="<?= $holder['prenom']?>" placeholder="inserez le prenom de votr client "> 
+<input type="text" name="prenom" value="<?= htmlspecialchars($holder['prenom'])?>" placeholder="inserez le prenom de votr client "> 
 
-<input type="text" name="telephone" value="<?= $holder['telephone']?>" placeholder="numéro de téléphone du client"> 
+<input type="text" name="telephone" value="<?= htmlspecialchars($holder['telephone'])?>" placeholder="numéro de téléphone du client"> 
 
-<input type="text" name="ref" value="<?= $holder['ref_client']?>"placeholder="référence client">
+<input type="text" name="ref" value="<?= htmlspecialchars($holder['ref_client'])?>"placeholder="référence client">
 
-<input type="text" name="email"  value="<?= $holder['email']?>" placeholder="e-mail du client">
+<input type="text" name="email"  value="<?= htmlspecialchars($holder['email'])?>" placeholder="e-mail du client">
 
-<input type="text" name="adresse" value="<?= $holder['adresse']?>" placeholder="adresse du client"> 
+<input type="text" name="adresse" value="<?= htmlspecialchars($holder['adresse'])?>" placeholder="adresse du client"> 
 
-<input type="text" name="ville" value="<?= $holder['ville']?>" placeholder="ville du client"> 
+<input type="text" name="ville" value="<?= htmlspecialchars($holder['ville'])?>" placeholder="ville du client"> 
 
-<input type="text" name="codePostal" value="<?= $holder['CodePostal']?>" placeholder="codePostal du client"> 
+<input type="text" name="codePostal" value="<?= htmlspecialchars($holder['CodePostal'])?>" placeholder="codePostal du client"> 
 
 
 <?php endforeach ?>

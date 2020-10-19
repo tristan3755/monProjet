@@ -42,4 +42,34 @@ function modif($id,$quantite,$nom,$ref,$prix){
 }
 
 
+
+function placeHolder($id){
+
+    
+    $dbh = new PDO
+(
+    DATABASE_DSN,
+    DATABASE_USERNAME,
+    DATABASE_PASSWORD,
+    [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]
+);
+
+$query='SELECT * FROM stock where :id=id_stock';
+$sth=$dbh->prepare($query);
+$sth->bindValue(':id',$id,PDO::PARAM_INT);
+
+$sth->execute();
+
+$placeHolder=$sth->fetchAll();
+
+return $placeHolder;
+
+}
+
+
+
+
 ?>
