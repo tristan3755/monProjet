@@ -6,11 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+
+
+<?php if(count($placeHolder)>0) :?>
+
+<?php foreach($placeHolder as $holder) :?>
     
 
 <form action='../controllers/modifVendeur.php?id=<?= $_GET["id"] ?>' method="post">
 
-<input type="text" name="nom" placeholder="inscrivez le nom de votre employé ">
+<input type="text" name="nom" value="<?= $holder['nom_vendeur'] ?>" placeholder="inscrivez le nom de votre employé ">
 
 <input type="text" name="prenom" placeholder="inscrivez le prénom de votre employé ">
 
@@ -24,6 +29,9 @@
 
 <input type="submit">
 
+<?php endforeach ?>
+
+<?php endif ?>
 
 </form>
 
