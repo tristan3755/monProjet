@@ -9,9 +9,34 @@
 
 <form action="../controllers/creationFacture2.php" methode="post">
 
+<?php foreach($clients as $client) :?>
+
+<Label for="datePaiement"> date de paiement prevu </Label>
 <input type="date" name="datePaiement">
 
 <textarea name="commentaire"></textarea>
+
+<Label for="adresseLivraison">adresse de livraison</Label>
+<input type="text" name="adresseLivraison" >
+
+<Label for="villeLivraison"> ville de livraison</Label>
+<input type="text" name="villeLivraison">
+
+<Label for="codeLivraison"> code postal</Label>
+<input type="text" name="codeLivraison">
+
+<Label for="adresseFacturation">adresse de facturation</Label>
+<input type="text" name="adresseFacturation">
+
+<Label for="villeLivraison"> ville de facturation </Label>
+<input type="text" name="villeFacturation">
+
+<Label for="codeFacturation"> code postal</Label>
+<input type="text" name="codeFacturation">
+
+<?php endforeach ?>
+
+<input type="submit">
 
 </form>
     
