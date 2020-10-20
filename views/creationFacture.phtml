@@ -12,6 +12,36 @@
 
 <?php if (count($infosClient) > 0) : ?>
 
+    <?php foreach ($infosClient as $client) : ?>
+
+
+
+<section>
+
+    <h1>Nom:<?= ($client['nom']) ?></h1>
+
+    <h2>Prénom:<?= ($client['prenom']) ?></h2>
+
+    <h3>Référence:<?= ($client['ref_client']) ?></h3>
+
+    <p>téléphone:<?= ($client['telephone']) ?></p>
+
+    <p>email:<?= ($client['email']) ?></p>
+
+    <p>adresse:<?= ($client['adresse']) ?></p>
+
+    <p>ville:<?= ($client['ville']) ?></p>
+
+    <p>code postal:<?= ($client['CodePostal']) ?></p>
+
+
+    <a href="../controllers/creationFacture2.php?id=<?= intval($client['id_clients']) ?>">créer une facture pour ce client </a>
+
+
+<?php endforeach; ?>
+
+</section>
+
 <?php endif ?>
 
 </body>
