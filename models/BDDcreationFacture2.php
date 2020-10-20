@@ -39,5 +39,29 @@ return $clients;
 
 };
 
+function facture($idSoc){
+
+	$dbh = new PDO
+	(
+		DATABASE_DSN,
+		DATABASE_USERNAME,
+		DATABASE_PASSWORD,
+		[
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+		]
+    );
+    
+
+$query='INSERT INTO facture (date_paiement,commentaire,adresse_livraison,adresse_facture,statut,ville_livraison,CodePostal_livraison,ville_facturation,codePostal_facturation,id_societes) VALUES :datePaiement,:comm,:adresseLivraison,:adresseFacturation';
+$sth=$dbh->prepare($query);
+$sth->bindValue(':id',$id,PDO::PARAM_INT);
+$sth->execute();
+
+
+
+};
+
+
 
 ?>
