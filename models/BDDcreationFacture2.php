@@ -33,7 +33,7 @@ $sth=$dbh->prepare($query);
 $sth->bindValue(':id',$id,PDO::PARAM_INT);
 $sth->execute();
 
-$clients=$sth->fetch();
+$clients=$sth->fetchAll();
 
 return $clients;
 
