@@ -20,7 +20,9 @@ if(!empty($_POST)){
     facture($client['id_societes'],$_POST['datePaiement'],$_POST['commentaire'],
     $_POST['adresseLivraison'],$_POST['villeLivraison'],$_POST['codeLivraison'],
     $_POST['adresseFacturation'],$_POST['villeFacturation'],$_POST['codeFacturation'],$_POST['statut']);
-    
+
+
+   
     }
     
   
