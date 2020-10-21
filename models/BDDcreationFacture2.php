@@ -39,7 +39,7 @@ return $client;
 
 };
 
-function facture($idSoc,$datePaiement,$commentaire,$adresseLivraison,$villeLivraison,$codeLivraison,$adresseFacturation,$VilleFacturation,$codeFacturation,$statut){
+function facture($idSoc,$datePaiement,$commentaire,$adresseLivraison,$villeLivraison,$codeLivraison,$adresseFacturation,$VilleFacturation,$codeFacturation,$statut,$idClient){
 
 	$dbh = new PDO
 	(
@@ -53,8 +53,8 @@ function facture($idSoc,$datePaiement,$commentaire,$adresseLivraison,$villeLivra
     );
     
 
-$query='INSERT INTO facture(date_paiement,commentaire,adresse_livraison,adresse_facturation,statut,ville_livraison,CodePostal_livraison,ville_facturation,codePostal_facturation,id_societes) 
-VALUES (:datePaiement,:comm,:adresseLivraison,:adresseFacturation,:statut,:villeLivraison,:codeLivraison,:villeFacturation,:codeFacturation,:idSoc)';
+$query='INSERT INTO facture(date_paiement,commentaire,adresse_livraison,adresse_facturation,statut,ville_livraison,CodePostal_livraison,ville_facturation,codePostal_facturation,id_societes,id_clients) 
+VALUES (:datePaiement,:comm,:adresseLivraison,:adresseFacturation,:statut,:villeLivraison,:codeLivraison,:villeFacturation,:codeFacturation,:idSoc,:idClient)';
 $sth=$dbh->prepare($query);
 $sth->bindValue(':idSoc',$idSoc,PDO::PARAM_INT);
 $sth->bindValue(':datePaiement',$datePaiement,PDO::PARAM_STR);
@@ -66,6 +66,7 @@ $sth->bindValue(':villeLivraison',$villeLivraison,PDO::PARAM_STR);
 $sth->bindValue(':codeLivraison',$codeLivraison,PDO::PARAM_STR);
 $sth->bindValue(':villeFacturation',$VilleFacturation,PDO::PARAM_STR);
 $sth->bindValue(':codeFacturation',$codeFacturation,PDO::PARAM_INT);
+$sth->bindValue(':idClient',$idClient,PDO::PARAM_INT);
 
 $sth->execute();
 
