@@ -1,7 +1,14 @@
 <?php
 
+require "../models/BDDlisteFactureClient.php";
 
-var_dump($_GET);
+
+
+
+$liste=recupFacture($_GET['id']);
+
+
+var_dump($_GET,$_SESSION,$liste);
 
 include ('../views/listeFactureClient.phtml');
 
