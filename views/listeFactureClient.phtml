@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<?php if(count($liste)>0) :?>
+<?php foreach($liste as $facture) :?>
+
+<h3><?= htmlspecialchars($facture['nom'])?></h3>
+<h4><?= htmlspecialchars($facture['prenom'])?></h4>
+<p><?= htmlspecialchars($facture['ref_client'])?></p>
+<p><?= htmlspecialchars($facture['telephone'])?></p>
+<p><?= htmlspecialchars($facture['date_emission'])?></p>
+<p><?= htmlspecialchars($facture['date_paiement'])?></p>
+<p><?= htmlspecialchars($facture['adresse_livraison'])?></p>
+<p><?= htmlspecialchars($facture['ville_livraison'])?></p>
+<p><?= htmlspecialchars($facture['codePostal_livraison'])?></p>
+<p><?= htmlspecialchars($facture['adresse_facturation'])?></p>
+<p><?= htmlspecialchars($facture['ville_facturation'])?></p>
+<p><?= htmlspecialchars($facture['codePostal_facturation'])?></p>
+
+
+<a href="">supprimer la facture</a>
+<a href="">modifier la facture</a>
+<a href="">ajouter des produits à cette facture</a>
+
+
+<?php endforeach ?>
+<?php endif ?> 
+
+</body>
+</html>

@@ -3,8 +3,6 @@
 require "../models/BDDlisteFactureClient.php";
 
 
-
-
 $liste=recupFacture($_GET['id']);
 
 

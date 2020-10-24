@@ -30,12 +30,12 @@ function recupFacture($idFacture){
 
 
 
-    $query='SELECT * FROM facture WHERE id_clients=:id';
+    $query='SELECT * FROM facture INNER JOIN clients  ON facture.id_clients=clients.id_clients WHERE facture.id_clients=:id';
     $sth=$dbh->prepare($query);
     $sth->bindValue(':id',$idFacture, PDO::PARAM_INT);
     $sth->execute();
 
-    $liste=$sth->fetch();
+    $liste=$sth->fetchAll();
 
     return $liste;
 
