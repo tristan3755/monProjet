@@ -13,9 +13,9 @@
 
 
 <Label for="datePaiement"> date de paiement prevu : </Label>
-<input type="date" name="datePaiement">
+<input type="date" name="datePaiement" value="<?=htmlspecialchars($client['date_paiement'])?>">
 
-<textarea name="commentaire"></textarea>
+<textarea name="commentaire"><?=htmlspecialchars($client['commentaire'])?></textarea>
 
 <Label for="adresseLivraison">adresse de livraison :</Label>
 <input type="text" name="adresseLivraison" value="<?=htmlspecialchars($client['adresse'])?>">
@@ -36,7 +36,7 @@
 <input type="text" name="codeFacturation" value="<?=htmlspecialchars($client['CodePostal'])?>">
 
 <Label for="statut"> Facture payée ?</Label>
-<input type="checkBox" name="statut">
+<input type="checkBox" name="statut" <?=htmlspecialchars($client['statut'])?>>
 
 
 
