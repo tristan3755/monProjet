@@ -24,8 +24,11 @@
 <p><?= htmlspecialchars($facture['codePostal_facturation'])?></p>
 
 
-<a href="">supprimer la facture</a>
-<a href="">modifier la facture</a>
+<a href="../controllers/suppFacture.php?id=<?= intval($facture['id_facture'])?>">supprimer la facture</a>
+<a href="../controllers/modifFacture.php?id=<?= intval($facture['id_facture'])?>">modifier la facture</a>
+
+<h2>Les produits affectés à cette facture</h2>
+
 <a href="">ajouter des produits à cette facture</a>
 
 
