@@ -27,7 +27,17 @@ function recupInfo($idFact){
 );
 
 
-$query='SELECT * FROM '
+$query='SELECT * FROM stock WHERE :id=id_societes';
+$sth=$dbh->prepare($query);
+$sth->bindValue(':id',$idFact,PDO::PARAM_INT);
+
+$sth->execute();
+
+$tabObjet=$sth->fetchAll();
+
+return $tabObjet;
+
+
 
 
 
