@@ -29,7 +29,7 @@
 
 <h2>Les produits affectés à cette facture</h2>
 
-<a href="">ajouter des produits à cette facture</a>
+<a href="../controllers/ajoutProduitFacture.php?id=<?= intval($facture['id_facture']) ?> & idSoc=<?= intval($facture['id_societes']) ?>">ajouter des produits à cette facture</a>
 
 
 <?php endforeach ?>
