@@ -6,6 +6,25 @@
     <title>Document</title>
 </head>
 <body>
+
+
+<form action="" method="post"></form>
+
+<?php if(count($tabObjet)>0) :?>
+
+    
+
+<select>
+<?php foreach($tabObjet as $objet) :?>
+<option value=""><?= htmlspecialchars($objet['nom_Produit']) ?></option>
+<?php endforeach ?> 
+
+
+</select>
+
+
+
+<?php endif ?>
     
 </body>
 </html>
