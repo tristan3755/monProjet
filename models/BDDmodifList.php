@@ -58,8 +58,8 @@ function modifListeFacture($id,$datePaiement,$comm,$adressLiv,$villeLiv,$codeLiv
 
 
 
-$query='UPDATE facture SET date_paiement=:datePaie,commentaire=:comm,adresse_livraison=:adressLiv,adresse_facturation:adressFact
-statut=:statut,ville_livraison=:villeLiv,codePostal_livraison:codeLiv,ville_facturation=:villeFact,codePostal_facturation=:codeFact WHERE :id=id_facture';
+$query='UPDATE facture SET date_paiement=:datePaie,commentaire=:comm,adresse_livraison=:adressLiv,adresse_facturation=:adressFact,
+statut=:statut,ville_livraison=:villeLiv,codePostal_livraison=:codeLiv,ville_facturation=:villeFact,codePostal_facturation=:codeFact WHERE :id=id_facture';
 
 
 $sth=$dbh->prepare($query);
@@ -72,8 +72,7 @@ $sth->bindValue(':codeLiv',$codeLiv,PDO::PARAM_STR);
 $sth->bindValue(':adressFact',$adressFact,PDO::PARAM_STR);
 $sth->bindValue(':villeFact',$villeFact,PDO::PARAM_STR);
 $sth->bindValue(':codeFact',$codeFact,PDO::PARAM_STR);
-$sth->bindValue(':statut',$statut,PDO::PARAM_STR);
-
+$sth->bindValue(':statut',$statut,PDO::PARAM_BOOL);
 
 $sth->execute();
 
