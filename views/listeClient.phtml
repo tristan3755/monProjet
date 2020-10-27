@@ -17,21 +17,21 @@
 
             <section>
 
-                <h1>Nom:<?= htmlspecialchars($client)['nom'] ?></h1>
+                <h1>Nom:<?= htmlspecialchars($client['nom']) ?></h1>
 
-                <h2>Prénom:<?= htmlspecialchars($client)['prenom'] ?></h2>
+                <h2>Prénom:<?= htmlspecialchars($client['prenom']) ?></h2>
 
-                <h3>Référence:<?= htmlspecialchars($client)['ref_client'] ?></h3>
+                <h3>Référence:<?= htmlspecialchars($client['ref_client']) ?></h3>
 
-                <p>téléphone:<?= htmlspecialchars($client)['telephone'] ?></p>
+                <p>téléphone:<?= htmlspecialchars($client['telephone']) ?></p>
 
-                <p>email:<?= htmlspecialchars($client)['email'] ?></p>
+                <p>email:<?= htmlspecialchars($client['email']) ?></p>
 
-                <p>adresse:<?= htmlspecialchars($client)['adresse'] ?></p>
+                <p>adresse:<?= htmlspecialchars($client['adresse']) ?></p>
 
-                <p>ville:<?= htmlspecialchars($client)['ville'] ?></p>
+                <p>ville:<?= htmlspecialchars($client['ville']) ?></p>
 
-                <p>code postal:<?= htmlspecialchars($client)['CodePostal'] ?></p>
+                <p>code postal:<?= htmlspecialchars($client['CodePostal']) ?></p>
 
 
                 <a href="../controllers/modifClient.php?id=<?= intval($client['id_clients']) ?>">modifier les informations du client</a>

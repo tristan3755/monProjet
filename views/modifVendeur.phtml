@@ -15,15 +15,15 @@
 
 <form action='../controllers/modifVendeur.php?id=<?= $_GET["id"] ?>' method="post">
 
-<input type="text" name="nom" value="<?= $holder['nom_vendeur'] ?>" placeholder="inscrivez le nom de votre employé ">
+<input type="text" name="nom" value="<?= htmlspecialchars($holder['nom_vendeur']) ?>" placeholder="inscrivez le nom de votre employé ">
 
-<input type="text" name="prenom" value="<?= $holder['prenom_vendeur'] ?>" placeholder="inscrivez le prénom de votre employé ">
+<input type="text" name="prenom" value="<?= htmlspecialchars($holder['prenom_vendeur']) ?>" placeholder="inscrivez le prénom de votre employé ">
 
-<input type="text" name="ref" value="<?= $holder['ref_vendeur'] ?>" placeholder="inscrivez le numéro de référence de votre employé">
+<input type="text" name="ref" value="<?= htmlspecialchars($holder['ref_vendeur']) ?>" placeholder="inscrivez le numéro de référence de votre employé">
 
-<input type="text" name="email" value="<?= $holder['email'] ?>" placeholder="inscrivez l'email de votre employé">
+<input type="text" name="email" value="<?= htmlspecialchars($holder['email']) ?>" placeholder="inscrivez l'email de votre employé">
 
-<input type="text" name="telephone" value="<?= $holder['telephone_vendeur'] ?>" placeholder="inscrivez le téléphone de votre vendeur">
+<input type="text" name="telephone" value="<?= htmlspecialchars($holder['telephone_vendeur']) ?>" placeholder="inscrivez le téléphone de votre vendeur">
 
 <input type="password" name="password"  placeholder="inscrivez le mot de passe qui sera utilisé par le vendeur">
 
