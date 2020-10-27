@@ -24,21 +24,21 @@
 
         <h1> Fiche client </h1>
 
-    <h1>Nom:<?= ($client['nom']) ?></h1>
+    <h1>Nom:<?= htmlspecialchars($client['nom']) ?></h1>
 
-    <h2>Prénom:<?= ($client['prenom']) ?></h2>
+    <h2>Prénom:<?= htmlspecialchars($client['prenom']) ?></h2>
 
-    <h3>Référence:<?= ($client['ref_client']) ?></h3>
+    <h3>Référence:<?= htmlspecialchars($client['ref_client']) ?></h3>
 
-    <p>téléphone:<?= ($client['telephone']) ?></p>
+    <p>téléphone:<?= htmlspecialchars($client['telephone']) ?></p>
 
-    <p>email:<?= ($client['email']) ?></p>
+    <p>email:<?= htmlspecialchars($client['email']) ?></p>
 
-    <p>adresse:<?= ($client['adresse']) ?></p>
+    <p>adresse:<?= htmlspecialchars($client['adresse']) ?></p>
 
-    <p>ville:<?= ($client['ville']) ?></p>
+    <p>ville:<?= htmlspecialchars($client['ville']) ?></p>
 
-    <p>code postal:<?= ($client['CodePostal']) ?></p>
+    <p>code postal:<?= htmlspecialchars($client['CodePostal']) ?></p>
 
     <div>
 

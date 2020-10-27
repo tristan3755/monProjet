@@ -17,13 +17,13 @@
 
             <section>
 
-                <h1>Nom:<?= ($stock)['nom_Produit'] ?></h1>
+                <h1>Nom:<?= htmlspecialchars($stock['nom_Produit']) ?></h1>
 
-                <h2>Référence produit:<?= ($stock)['ref'] ?></h2>
+                <h2>Référence produit:<?= htmlspecialchars($stock['ref']) ?></h2>
 
-                <h3>prix unitaire:<?= ($stock)['prix_unitaire'] ?></h3>
+                <h3>prix unitaire:<?= htmlspecialchars($stock['prix_unitaire']) ?></h3>
 
-                <p>stock:<?= ($stock)['quantite_stock'] ?></p>
+                <p>stock:<?= htmlspecialchars($stock['quantite_stock']) ?></p>
 
 
                 <a href="../controllers/modifStock.php?id=<?= intval($stock['id_stock']) ?>">modifier les informations du produit</a>
