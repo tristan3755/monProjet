@@ -1,13 +1,18 @@
 <?php
 
+include "../models/BBDrecupObjetSelect.php";
 
 var_dump($_GET);
 
 
-/*if(!empty($_POST)){
+if(!empty($_GET)){
 
-    $recupObjetSelect=recupObjetSelect($_POST)
+    $recupObjetSelect=recupObjetSelect($_GET['idObjet']);
+    
+}
 
-}*/
+
+var_dump($recupObjetSelect);
+
 
 ?>
