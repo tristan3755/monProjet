@@ -8,21 +8,25 @@
 <body>
 
 
-<form action="" method="post"></form>
+<form action="../controllers/recupObjetSelect.php" method="get">
 
 <?php if(count($tabObjet)>0) :?>
 
     
 
-<select>
+<select name="objet">
 <?php foreach($tabObjet as $objet) :?>
-<option value=""><?= htmlspecialchars($objet['nom_Produit']) ?></option>
+    
+<option value="<?= intval($objet['id_stock'])?>"><?= htmlspecialchars($objet['nom_Produit'])?></option>
 <?php endforeach ?> 
 
+<input type="submit">
 
 </select>
 
 
+
+</form>
 
 <?php endif ?>
     
