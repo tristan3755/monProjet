@@ -20,11 +20,21 @@
 <option value="<?= intval($objet['id_stock'])?>"><?= htmlspecialchars($objet['nom_Produit'])?></option>
 <?php endforeach ?> 
 
-<input type="submit">
+</select>
+
+<select name="idFacture">
+
+    
+<option value="<?= intval($_GET['id'])?>"><?= htmlspecialchars($_GET['id'])?></option>
+
+
+
+
 
 </select>
 
 
+<input type="submit">
 
 </form>
 

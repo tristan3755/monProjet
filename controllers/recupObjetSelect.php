@@ -15,4 +15,6 @@ if(!empty($_GET)){
 var_dump($recupObjetSelect);
 
 
+require "../views/recupObjetSelect.phtml"
+
 ?>
