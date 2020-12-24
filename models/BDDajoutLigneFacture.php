@@ -1,6 +1,5 @@
 <?php
 
-
 session_start();
 if(!array_key_exists('vendeurId',$_SESSION)){
     header('location:../controllers/connexion.php');
@@ -14,7 +13,7 @@ define('DATABASE_USERNAME', 'root');
 define('DATABASE_PASSWORD', '');
 
 
-function ajoutLigneFacture($nom,$quantité,$prix,$tva,$idFacture){
+function ajoutLigneFacture($nom,$quantite,$prix,$tva,$idFacture){
 
 
 
@@ -38,11 +37,11 @@ function ajoutLigneFacture($nom,$quantité,$prix,$tva,$idFacture){
     $sth->bindValue(':prix',$prix,PDO::PARAM_INT);
     $sth->bindValue(':tva',$tva,PDO::PARAM_INT);
     $sth->bindValue(':id',$idFacture,PDO::PARAM_INT);
-    $sth->bindValue(':quantite',$quantité,PDO::PARAM_INT);
+    $sth->bindValue(':quantite',$quantite,PDO::PARAM_INT);
 
     $sth->execute();
 
-}
+};
 
 
 ?>

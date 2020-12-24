@@ -14,12 +14,12 @@
 <form method="post" action="../controllers/ajoutLigneFacture.php?idFacture=<?=$_GET["idFacture"] ?>">
 
 <label for="nom">dénomination</label>
-<select>
-<option  name="nom" value="<?=htmlspecialchars($recupObjetSelect['nom_Produit'])?>"><?=htmlspecialchars($recupObjetSelect['nom_Produit'])?></option>
+<select name="nom">
+<option   value="<?=htmlspecialchars($recupObjetSelect['nom_Produit'])?>"><?=htmlspecialchars($recupObjetSelect['nom_Produit'])?></option>
 </select>
 
-<label for="quantité">stock maximal</label>
-<input type="text" name="quantité" placeholder="<?=htmlspecialchars($recupObjetSelect['quantite_stock'])?>">
+<label for="quantite">stock maximal</label>
+<input type="text" name="quantite" placeholder="<?=htmlspecialchars($recupObjetSelect['quantite_stock'])?>">
 
 <label for="prixUnitaire">prix unitaire</label>
 <input type="text" name="prix" value="<?=htmlspecialchars($recupObjetSelect['prix_unitaire'])?>">
