@@ -30,7 +30,7 @@ function ajoutLigneFacture($nom,$quantite,$prix,$tva,$idFacture){
 
 
     $query="INSERT INTO facturedetails(quantite,prix_unitaire,TVA,nom,id_facture) 
-    VALUES(:quantite,:prix,:tva,:id,:nom)";
+    VALUES(:quantite,:prix,:tva,:nom,:id)";
 
     $sth=$dbh->prepare($query);
     $sth->bindValue(':nom',$nom,PDO::PARAM_STR);
