@@ -8,31 +8,37 @@
 <body>
     
 <?php if(count($liste)>0) :?>
-<?php foreach($liste as $facture) :?>
 
-<h3><?= htmlspecialchars($facture['nom'])?></h3>
-<h4><?= htmlspecialchars($facture['prenom'])?></h4>
-<p><?= htmlspecialchars($facture['ref_client'])?></p>
-<p><?= htmlspecialchars($facture['telephone'])?></p>
-<p><?= htmlspecialchars($facture['date_emission'])?></p>
-<p><?= htmlspecialchars($facture['date_paiement'])?></p>
-<p><?= htmlspecialchars($facture['adresse_livraison'])?></p>
-<p><?= htmlspecialchars($facture['ville_livraison'])?></p>
-<p><?= htmlspecialchars($facture['codePostal_livraison'])?></p>
-<p><?= htmlspecialchars($facture['adresse_facturation'])?></p>
-<p><?= htmlspecialchars($facture['ville_facturation'])?></p>
-<p><?= htmlspecialchars($facture['codePostal_facturation'])?></p>
+<h3><?= htmlspecialchars($liste['nom'])?></h3>
+<h4><?= htmlspecialchars($liste['prenom'])?></h4>
+<p><?= htmlspecialchars($liste['ref_client'])?></p>
+<p><?= htmlspecialchars($liste['telephone'])?></p>
+<p><?= htmlspecialchars($liste['date_emission'])?></p>
+<p><?= htmlspecialchars($liste['date_paiement'])?></p>
+<p><?= htmlspecialchars($liste['adresse_livraison'])?></p>
+<p><?= htmlspecialchars($liste['ville_livraison'])?></p>
+<p><?= htmlspecialchars($liste['codePostal_livraison'])?></p>
+<p><?= htmlspecialchars($liste['adresse_facturation'])?></p>
+<p><?= htmlspecialchars($liste['ville_facturation'])?></p>
+<p><?= htmlspecialchars($liste['codePostal_facturation'])?></p>
 
-
-<a href="../controllers/suppFacture.php?id=<?= intval($facture['id_facture'])?>">supprimer la facture</a>
-<a href="../controllers/modifListeFacture.php?id=<?= intval($facture['id_facture'])?>">modifier la facture</a>
+<a href="../controllers/suppFacture.php?id=<?= intval($liste['id_facture'])?>">supprimer la facture</a>
+<a href="../controllers/modifListeFacture.php?id=<?= intval($liste['id_facture'])?>">modifier la facture</a>
 
 <h2>Les produits affectés à cette facture</h2>
+<?php if(count($objet)>0) :?>
+<?php foreach($objet as $objets) :?>
 
-<a href="../controllers/ajoutProduitFacture.php?id=<?= intval($facture['id_facture']) ?> & idSoc=<?= intval($facture['id_societes']) ?>">ajouter des produits à cette facture</a>
+    <h3><?= htmlspecialchars($objets['nom'])?></h3>
+    <p>quantité:<?= htmlspecialchars($objets['quantite'])?></p>
+    <p>prix unitaire: <?= htmlspecialchars($objets['prix_unitaire'])?> €</p>
+    <p>TVA: <?= htmlspecialchars($objets['TVA'])?> %</p>
 
+    <?php endforeach ?>
+<?php endif ?> 
 
-<?php endforeach ?>
+<a href="../controllers/ajoutProduitFacture.php?id=<?= intval($liste['id_facture']) ?> & idSoc=<?= intval($liste['id_societes']) ?>">ajouter des produits à cette facture</a>
+
 <?php endif ?> 
 
 </body>

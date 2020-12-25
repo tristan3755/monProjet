@@ -35,12 +35,39 @@ function recupFacture($idFacture){
     $sth->bindValue(':id',$idFacture, PDO::PARAM_INT);
     $sth->execute();
 
-    $liste=$sth->fetchAll();
+    $liste=$sth->fetch();
 
     return $liste;
 
 }
 
+
+function recupDetailFacture($idDetails){
+
+
+    $dbh = new PDO
+	(
+		DATABASE_DSN,
+		DATABASE_USERNAME,
+		DATABASE_PASSWORD,
+		[
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+		]
+    );
+
+
+
+    $query='SELECT quantite,prix_unitaire,TVA,nom FROM factureDetails INNER JOIN facture ON facture.id_facture=factureDetails.id_Facture WHERE facture.id_facture=:id';
+    $sth=$dbh->prepare($query);
+    $sth->bindValue(':id',$idDetails, PDO::PARAM_INT);
+    $sth->execute();
+
+    $objet=$sth->fetchAll();
+
+    return $objet;
+
+}
 
 
 ?>
