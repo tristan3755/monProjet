@@ -58,7 +58,7 @@ function recupDetailFacture($idDetails){
 
 
 
-    $query='SELECT quantite,prix_unitaire,TVA,nom FROM factureDetails INNER JOIN facture ON facture.id_facture=factureDetails.id_Facture WHERE facture.id_facture=:id';
+    $query='SELECT id_factureDetails,quantite,prix_unitaire,TVA,nom FROM factureDetails INNER JOIN facture ON facture.id_facture=factureDetails.id_Facture WHERE facture.id_facture=:id';
     $sth=$dbh->prepare($query);
     $sth->bindValue(':id',$idDetails, PDO::PARAM_INT);
     $sth->execute();

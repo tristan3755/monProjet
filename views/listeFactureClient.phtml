@@ -33,7 +33,8 @@
     <p>quantité:<?= htmlspecialchars($objets['quantite'])?></p>
     <p>prix unitaire: <?= htmlspecialchars($objets['prix_unitaire'])?> €</p>
     <p>TVA: <?= htmlspecialchars($objets['TVA'])?> %</p>
-    
+    <a href="../controllers/modifProduitFactureDetails.php?id=<?= intval($objets['id_factureDetails']) ?>">modifier ce produit sur la facture</a>
+    <a href="../controllers/supProduitFactureDetails.php?id=<?= intval($objets['id_factureDetails']) ?>">supprimer ce produit sur la facture</a>
 <?php endforeach ?>
 <?php endif ?> 
 

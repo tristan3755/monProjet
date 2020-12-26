@@ -26,13 +26,6 @@ function connexion($pseudo){
     $user=$sth->fetch();
     
     return $user;
-
-
 }
-
-
-
-
-
 
 ?>
