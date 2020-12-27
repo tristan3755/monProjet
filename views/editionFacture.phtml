@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/edition.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+
+<section id="facture">
+
+<article class="fact">
+<h1>FACTURE</h1>
+</article>
+
+<article class="adresseSociete">
+
+<p><?= $recupEditionSociete['nom'] ?> <br> <?= $recupEditionSociete['adresse'] ?> <br> <?= $recupEditionSociete['telephone'] ?></p>
+
+</article>
+<article class="infosClients">
+<div>
+<h2>Facturé à</h2>
+<p><?= $recupEditionClient['nom'] ?> <br><?= $recupEditionClient['prenom'] ?> <br> <?= $recupEditionClient['ref_client'] ?> <br><?= $recupEdition[0]['adresse_facturation'] ?> <br><?= $recupEdition[0]['codePostal_facturation'] ?>  <br><?= $recupEdition[0]['ville_facturation'] ?>  <br> <?= $recupEditionClient['telephone'] ?></p>
+</div>
+
+<div>
+<h2>Envoyé à</h2>
+<p>  <?= $recupEdition[0]['adresse_livraison'] ?> <br><?= $recupEdition[0]['codePostal_livraison'] ?><br><?= $recupEdition[0]['ville_livraison'] ?> </p>
+</div>
+
+<div>
+<h2>FACTURE n°</h2>
+<h2>DATE EMISSION</h2>
+<h2>DATE RECOUVREMENT</h2>
+</div>
+
+
+<div>
+<h2><?= $recupEdition[0]['id_facture'] ?></h2>
+<h2><?= $recupEdition[0]['date_emission'] ?> </h2>
+<h2><?= $recupEdition[0]['date_paiement'] ?></h2>
+</div>
+
+</article>
+
+</section>
     
 </body>
 </html>

@@ -41,4 +41,58 @@ function recupEdition($idFact){
 
 
 
+function recupEditionSociete($id){
+
+
+	$dbh = new PDO
+	(
+		DATABASE_DSN,
+		DATABASE_USERNAME,
+		DATABASE_PASSWORD,
+		[
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+		]
+    );
+
+
+    $query="SELECT nom,adresse,telephone FROM societes where :id=id_societes";
+    $sth=$dbh->prepare($query);
+    $sth->bindValue(':id',$id, PDO::PARAM_INT);
+    $sth->execute();
+    $recupEditionSociete=$sth->fetch();
+
+    return $recupEditionSociete;
+
+}
+
+
+
+function recupEditionClient($id){
+
+
+	$dbh = new PDO
+	(
+		DATABASE_DSN,
+		DATABASE_USERNAME,
+		DATABASE_PASSWORD,
+		[
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+		]
+    );
+
+
+    $query="SELECT * FROM clients where :id=id_clients";
+    $sth=$dbh->prepare($query);
+    $sth->bindValue(':id',$id, PDO::PARAM_INT);
+    $sth->execute();
+    $recupEditionClient=$sth->fetch();
+
+    return $recupEditionClient;
+
+}
+
+
+
 ?>
