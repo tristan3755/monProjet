@@ -54,6 +54,28 @@
 
 </article>
 
+<?php foreach ($recupEdition as $recupEditions):?>
+
+<article class="article">
+
+<h3><?= $recupEditions['quantite'] ?></h3>
+<h3><?= $recupEditions['nom'] ?></h3>
+<h3><?= $recupEditions['prix_unitaire'] ?>€</h3>
+<h3><?= $recupEditions['TVA'] ?>%</h3>
+
+</article>
+
+<?php endforeach ?>
+
+<article class="TTC">
+
+<h2>total HT : </h2>
+<h2>Total tva 5,5% :</h2>
+<h2>Total tva 20% :</h2>
+<h2>Montant TTC :</h2>
+
+</article>
+
 </section>
     
 </body>
