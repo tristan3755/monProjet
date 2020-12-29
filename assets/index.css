@@ -269,7 +269,20 @@ header div span:nth-child(2){
 }
 
 #qui article div:nth-child(1){
-    background-image: url(../assets/images/20943780.jpg);
+    background-image: url(../assets/images/facture.jpg);
     background-position: center;
     background-size: cover;
 }
+
+#qui article div:nth-child(2){
+    background-image: url(../assets/images/time.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#qui article div:nth-child(3){
+    background-image: url(../assets/images/productivity.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
