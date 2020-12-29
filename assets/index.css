@@ -261,6 +261,7 @@ header div span:nth-child(2){
 }
 
 #qui article div{
+    position: relative;
     width: 400px;
     max-width: 90%;
     margin: 50px;
@@ -269,20 +270,124 @@ header div span:nth-child(2){
 }
 
 #qui article div:nth-child(1){
+   
     background-image: url(../assets/images/facture.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #qui article div:nth-child(2){
+   
     background-image: url(../assets/images/time.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #qui article div:nth-child(3){
+    
     background-image: url(../assets/images/productivity.jpg);
     background-position: center;
     background-size: cover;
 }
 
+
+#qui article div:nth-child(1) .hover1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #9E2121;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 1s;
+    opacity: 0;
+}
+
+
+#qui article div:nth-child(2) .hover2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #9E2121;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 1s;
+    opacity: 0;
+}
+
+#qui article div:nth-child(3) .hover3{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #9E2121;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 1s;
+    opacity: 0;
+}
+
+.hover1 p{
+    color: white;
+    width: 80%;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+
+}
+.hover2 p{
+    color: white;
+    width: 80%;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+
+}
+.hover3 p{
+    color: white;
+    width: 80%;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+
+}
+
+
+#qui article div:nth-child(1) .hover1 .titreHover{
+    color: white;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+#qui article div:nth-child(2) .hover2 .titreHover{
+    color: white;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+#qui article div:nth-child(3) .hover3 .titreHover{
+    color: white;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+
+#qui article div:nth-child(1):hover .hover1{
+    cursor: pointer;
+    opacity: 1;
+    
+}
+
+#qui article div:nth-child(2):hover .hover2{
+    cursor: pointer;
+    opacity: 1;
+    
+}
+#qui article div:nth-child(3):hover .hover3{
+    cursor: pointer;
+    opacity: 1;
+    
+}
