@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../assets/index.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2dc5983f48.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <script src="../assets/javascript.js" defer></script>
@@ -67,6 +68,41 @@
         </article>
 
     </section>
+
+    <section id="sect4">
+        <article class="titreSect2">
+          <h1>Contactez-nous</h1>
+        </article>
+        <form method="POST" action="../views/email.php">
+          <div class="input">
+            <div class="saisie">
+              <label for="email">Email</label>
+              <input type="text" name="email" placeholder="votre adresse mail">
+    
+              <label for="prenom">Prénom</label>
+              <input type="text" name="prenom" placeholder="votre prénom">
+    
+              <label for="nom">Nom</label>
+              <input type="text" name="nom" placeholder="votre nom">
+    
+              <label for="objet">Objet</label>
+              <input type="text" name="objet" placeholder="objet de votre demande">
+    
+            </div>
+            <div class="textarea">
+              <textarea name="mail" placeholder="rédigez votre mail ici"></textarea>
+            </div>
+          </div>
+    
+          <button type="submit" class="bouton"> ENVOYER <span></span><span></span><span></span><span></span></button>
+    
+        </form>
+    
+      </section>
+
+      <footer>
+          <p><i class="far fa-copyright"></i>Organiz 2020</p>
+      </footer>
 
 </body>
 

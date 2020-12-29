@@ -281,6 +281,7 @@ header div span:nth-child(2){
     background-image: url(../assets/images/time.jpg);
     background-position: center;
     background-size: cover;
+    margin-bottom: 250px;
 }
 
 #qui article div:nth-child(3){
@@ -377,17 +378,230 @@ header div span:nth-child(2){
 
 #qui article div:nth-child(1):hover .hover1{
     cursor: pointer;
-    opacity: 1;
+    opacity: 0.8;
     
 }
 
 #qui article div:nth-child(2):hover .hover2{
     cursor: pointer;
-    opacity: 1;
+    opacity: 0.8;
     
 }
 #qui article div:nth-child(3):hover .hover3{
     cursor: pointer;
-    opacity: 1;
+    opacity: 0.8;
     
 }
+
+/******************************************************formulaire************************************************/
+
+#sect4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 150px;
+  }
+
+  #sect4 .titreSect2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    align-self: center;
+    font-size: 15px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+    margin-bottom: 150px;
+    border-radius: 50%;
+    border: solid 3px #9E2121;
+    background-color: #9E2121;
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+ 
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    min-height: 60vh;
+  }
+  
+  .input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 60vh;
+  }
+  
+  .input input {
+    margin-bottom: 20px;
+    border: #9E2121 3px solid;
+  }
+  
+  .saisie > * {
+    width: 70%;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    min-width: 300px;
+  }
+  
+  .textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 40vh;
+    min-width: 300px;
+  }
+  
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin: auto;
+    border: #9E2121 3px solid;
+  }
+  
+  .saisie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    min-width: 300px;
+    height: 50vh;
+  }
+  
+  .bouton {
+    position: relative;
+    background-color: whitesmoke;
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: #9E2121;
+    margin: 20px;
+  }
+  
+  .bouton span {
+    position: absolute;
+    background-color: #9E2121;
+  }
+  
+  .bouton span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+  }
+  
+  .bouton:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+  }
+  
+  .bouton span:nth-child(2) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+  }
+  
+  .bouton:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s;
+  }
+  
+  .bouton span:nth-child(3) {
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s;
+  }
+  
+  .bouton:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.25s;
+  }
+  
+  .bouton span:nth-child(4) {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+  }
+  
+  .bouton:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.25s;
+  }
+  
+  .bouton:hover {
+    background-color: #9E2121;
+    color: white;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+  }
+
+  /*************************************************footer*******************************************************************/
+
+  footer{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    background-color: #9E2121;
+
+  }
+
+  footer p{
+    color: white;
+    font-family: 'Playfair Display', serif;
+  }
+  
