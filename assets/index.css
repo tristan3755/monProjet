@@ -4,9 +4,7 @@
 
 body{
     margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+   
    
 }
 
@@ -31,7 +29,7 @@ body{
 
 header{
 
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -41,13 +39,17 @@ header{
     background-color: #9E2121;
     border-bottom:1px solid white ;
     opacity: 0;
+    transform: translate(12%);
+    top: 0;
+    left: 0;
+   
    
 }
 
 a{
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
     font-family: 'Playfair Display', serif;
 }
@@ -164,7 +166,7 @@ header div span:nth-child(2){
     left: 5%;
     bottom: 10%;
     width: 230px;
-    max-width: 40%;
+    max-width: 20%;
     animation: tourne 12s linear infinite;
     
       
@@ -175,7 +177,7 @@ header div span:nth-child(2){
     left: 18%;
     bottom: 30%;
     width: 150px;
-    max-width: 40%;
+    max-width: 25%;
     animation: tourneInverse 8s linear infinite;
 }
 
@@ -184,7 +186,7 @@ header div span:nth-child(2){
     left: 20%;
     bottom: 17.5%;
     width: 90px;
-    max-width: 40%;
+    max-width: 20%;
     animation: tourne 3s linear infinite;
 }
 
@@ -207,3 +209,63 @@ header div span:nth-child(2){
     transform: rotate(360deg);
   }
 }
+
+
+
+/*******************************************qui somme nous ?***************************************************************/
+
+#qui{
+    min-height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+#qui div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 200px;
+
+}
+
+
+#qui div h1{
+    margin:20px;
+    color: #9E2121;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 5px;
+}
+
+#qui div h2{
+    
+    color: rgb(163, 163, 163);
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 5px;
+}
+
+#qui article{
+    width:100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#qui article div{
+    width: 400px;
+    max-width: 90%;
+    margin: 50px;
+    height: 400px;
+    
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
