@@ -265,7 +265,11 @@ header div span:nth-child(2){
     max-width: 90%;
     margin: 50px;
     height: 400px;
-    
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
+#qui article div:nth-child(1){
+    background-image: url(../assets/images/20943780.jpg);
+    background-position: center;
+    background-size: cover;
+}
