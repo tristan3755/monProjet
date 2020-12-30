@@ -7,7 +7,7 @@
 </head>
 <body>
     
-<?php if(count($liste)>0) :?>
+<?php if(count($liste)>0) :?> 
 
 <h3><?=htmlspecialchars($liste['nom'])?></h3>
 <h4><?=htmlspecialchars($liste['prenom'])?></h4>
@@ -40,11 +40,9 @@
 
 <a href="../controllers/ajoutProduitFacture.php?id=<?= intval($liste['id_facture']) ?> & idSoc=<?= intval($liste['id_societes']) ?>">ajouter des produits à cette facture</a>
 
-<?php endif ?> 
-
-
-
 <a href="../controllers/editionFacture.php?id=<?= intval($liste['id_facture']) ?>">éditer cette facture</a>
+
+<?php endif ?> 
 
 </body>
 </html>

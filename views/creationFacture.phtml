@@ -13,9 +13,6 @@
 <?php if (count($infosClient) > 0) : ?>
 
    
-
-
-
 <section>
 
 <?php foreach ($infosClient as $client) : ?>
@@ -45,8 +42,10 @@
     <h1>liste des facture appartenant au client</h1>
 
     </div>
-
+    <?php if (count($client) > 0) : ?>
 <a href="../controllers/listeFactureClient.php?id=<?= intval($client['id_clients']) ?>">liste des factures pour ce client </a> 
+<?php endif ?>
+
 <br>
 <a href="../controllers/creationFacture2.php?id=<?= intval($client['id_clients']) ?>">créer une facture pour ce client </a> 
 
