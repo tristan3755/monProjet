@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/inscriptionSociete.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-<?php var_dump($_POST); ?>
+<?php/* var_dump($_POST); */?>
+<section id="inscription">
+
 <form action="../controllers/inscriptionSociete.php" method="post"> 
 
 <input type="text" name="nom" placeholder="Nom de votre société"> 
@@ -17,10 +20,12 @@
 
 <input type="password" name="password" placeholder="entrez un mot de passe"> 
 
-<input type="submit">
+<button type="submit" class="bouton"> S'INSCRIRE <span></span><span></span><span></span><span></span></button>
 
 
 </form>
+
+</section>
 
 
 
