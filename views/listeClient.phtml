@@ -4,10 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/listeClient.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/2dc5983f48.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
+
+<section id="contener">
+<header>
+<a href="../controllers/pageConnecteeSociete.php"><i class="fas fa-home"></i></a>
+
+</header>
 
     <?php if (count($listeClient) > 0) : ?>
 
@@ -15,38 +25,40 @@
 
 
 
-            <section>
+            <section class="vendeur">
 
-                <h1>Nom:<?= htmlspecialchars($client['nom']) ?></h1>
+                <h1>Nom: <?= htmlspecialchars($client['nom']) ?></h1>
 
-                <h2>Prénom:<?= htmlspecialchars($client['prenom']) ?></h2>
+                <h2>Prénom: <?= htmlspecialchars($client['prenom']) ?></h2>
 
-                <h3>Référence:<?= htmlspecialchars($client['ref_client']) ?></h3>
+                <h3>Référence: <?= htmlspecialchars($client['ref_client']) ?></h3>
 
-                <p>téléphone:<?= htmlspecialchars($client['telephone']) ?></p>
+                <p>téléphone: <?= htmlspecialchars($client['telephone']) ?></p>
 
-                <p>email:<?= htmlspecialchars($client['email']) ?></p>
+                <p>email: <?= htmlspecialchars($client['email']) ?></p>
 
-                <p>adresse:<?= htmlspecialchars($client['adresse']) ?></p>
+                <p>adresse: <?= htmlspecialchars($client['adresse']) ?></p>
 
-                <p>ville:<?= htmlspecialchars($client['ville']) ?></p>
+                <p>ville: <?= htmlspecialchars($client['ville']) ?></p>
 
-                <p>code postal:<?= htmlspecialchars($client['CodePostal']) ?></p>
-
-
-                <a href="../controllers/modifClient.php?id=<?= intval($client['id_clients']) ?>">modifier les informations du client</a>
+                <p>code postal: <?= htmlspecialchars($client['CodePostal']) ?></p>
 
 
-                <a href="../controllers/suppClient.php?id=<?= intval($client['id_clients']) ?>">Supprimer le client</a>
+                <a class="bouton" href="../controllers/modifClient.php?id=<?= intval($client['id_clients']) ?>"><span></span><span></span><span></span><span></span>modifier les informations du client</a>
 
 
+                <a class="bouton" href="../controllers/suppClient.php?id=<?= intval($client['id_clients']) ?>"><span></span><span></span><span></span><span></span>Supprimer le client</a>
+
+                <div class="border"></div>
+                
             <?php endforeach; ?>
+            <?php endif; ?>
+
 
             </section>
 
-        <?php endif; ?>
-
-
+  
+</section>
 
 
 
