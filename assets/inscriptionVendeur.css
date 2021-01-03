@@ -34,6 +34,7 @@ a i{
     justify-content: space-evenly;
     background-image: url(../assets/images/bgInscriptionVendeur.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 form{

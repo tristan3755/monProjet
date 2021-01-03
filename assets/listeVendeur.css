@@ -7,22 +7,47 @@ body{
     padding: 0;
 }
 
+header{
+    position: relative;
+    width: 100%;
+    min-height: 100px;   
+}
+
+header a{
+    position: absolute;
+    right: 20%;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+a i{
+    color: white;
+}
+
+
 #contener{
     min-height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     background-image: url(../assets/images/bgListeVendeur.jpg);
     background-size: cover;
     
 }
 
+.border{
+    width: 600px;
+    max-width: 80%;
+    height: 5px;
+    border-bottom:white 1.5px solid;
+}
+
 .vendeur{
     min-height: 50vh;
-    width: 400px;
+    width:100%;
     max-width: 80%;
     display: flex;
     flex-direction: column;
