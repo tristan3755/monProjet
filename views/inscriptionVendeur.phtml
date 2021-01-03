@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/inscriptionVendeur.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2dc5983f48.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    
 
+    
+<section id="contener">
+<header>
+<a href="../controllers/pageConnecteeSociete.php"><i class="fas fa-home"></i></a>
+
+</header>
 <form action='../controllers/inscriptionVendeur.php' method="post">
 
 <input type="text" name="nom" placeholder="inscrivez le nom de votre employé ">
@@ -22,14 +29,13 @@
 
 <input type="text" name="password" placeholder="inscrivez le mot de passe qui sera utilisé par le vendeur">
 
-<input type="submit">
+<button class="bouton" type="submit"><span></span><span></span><span></span><span></span>Inscription</button>
 
 
 </form>
 
 
-<a href="../controllers/pageConnecteeSociete.php">home</a>
-
+</section>
 
 </body>
 </html>
