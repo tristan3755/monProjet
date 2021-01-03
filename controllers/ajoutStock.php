@@ -10,7 +10,7 @@ ajoutStock($_SESSION['societeId'],$_POST['quantite'],$_POST['nom'],$_POST['ref']
 };
 
 
-var_dump($_POST,$_SESSION);
+// var_dump($_POST,$_SESSION);
 
 include "../views/ajoutStock.phtml";
 
