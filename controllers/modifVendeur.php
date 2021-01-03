@@ -19,9 +19,9 @@ if(!empty($_POST) && !empty($_GET)){
 
 $placeHolder=holder($_GET['id']);
 
-var_dump($_GET);
-var_dump($_SESSION);
-var_dump($placeHolder);
+// var_dump($_GET);
+// var_dump($_SESSION);
+// var_dump($placeHolder);
 
 include "../views/modifVendeur.phtml"
 
