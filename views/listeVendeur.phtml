@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/listeVendeur.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
+
+<section id="contener">
 
     <?php if (count($listeVendeur) > 0) : ?>
 
@@ -15,33 +20,35 @@
 
 
 
-            <section>
+            <section class="vendeur">
 
-                <h1>Nom:<?= htmlspecialchars($vendeur['nom_vendeur']) ?></h1>
+                <h1>Nom: <?= htmlspecialchars($vendeur['nom_vendeur']) ?></h1>
 
-                <h2>Prénom:<?= htmlspecialchars($vendeur['prenom_vendeur']) ?></h2>
+                <h2>Prénom: <?= htmlspecialchars($vendeur['prenom_vendeur']) ?></h2>
 
-                <h3>Référence:<?= htmlspecialchars($vendeur['ref_vendeur']) ?></h3>
+                <h3>Référence: <?= htmlspecialchars($vendeur['ref_vendeur']) ?></h3>
 
-                <p>email:<?= htmlspecialchars($vendeur['email']) ?></p>
+                <p>email: <?= htmlspecialchars($vendeur['email']) ?></p>
 
-                <p>téléphone:<?= htmlspecialchars($vendeur['telephone_vendeur']) ?></p>
+                <p>téléphone: <?= htmlspecialchars($vendeur['telephone_vendeur']) ?></p>
 
-                <a href="../controllers/modifVendeur.php?id=<?= intval($vendeur['id_vendeur']) ?>">modifier les informations du vendeur</a>
+                <a class="bouton" href="../controllers/modifVendeur.php?id=<?= intval($vendeur['id_vendeur']) ?>"><span></span><span></span><span></span><span></span>modifier les informations du vendeur</a>
 
 
-                <a href="../controllers/suppVendeur.php?id=<?= intval($vendeur['id_vendeur']) ?>">Supprimer le vendeur</a>
+                <a class="bouton" href="../controllers/suppVendeur.php?id=<?= intval($vendeur['id_vendeur']) ?>"><span></span><span></span><span></span><span></span>Supprimer le vendeur</a>
 
 
             <?php endforeach; ?>
 
-            </section>
+            
 
         <?php endif; ?>
 
+        </section>
 
 
 
+        </section>
 
 
 </body>
