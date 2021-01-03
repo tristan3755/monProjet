@@ -5,19 +5,18 @@
 body{
     margin: 0;
     padding: 0;
- 
 }
 
 #contener{
     min-height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     background-image: url(../assets/images/bgSocieteConnecte.jpg);
     background-size: cover;
-
 }
 
 .bouton {
@@ -33,12 +32,11 @@ body{
     font-size: 15px;
     letter-spacing: 5px;
     color: white;
-    margin: 20px;
+    margin: 50px;
     text-decoration: none;
     text-align: center;
     font-family: 'Playfair Display', serif;
-    
-  }
+}
 
  
   .bouton span {
