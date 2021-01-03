@@ -7,7 +7,7 @@ if(!empty($_POST)){
  ajoutClient($_SESSION['societeId'],$_POST['nom'],$_POST['prenom'],$_POST['telephone'],$_POST['ref'],$_POST['email'],$_POST['adresse'],$_POST['ville'],$_POST['codePostal'],);
 
 }
-var_dump($_SESSION,$_POST);
+// var_dump($_SESSION,$_POST);
 
 include "../views/ajoutClient.phtml"
 

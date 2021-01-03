@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/ajoutClient.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2dc5983f48.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+<section id="contener">
+<header>
+    
+<a href="../controllers/pageConnecteeSociete.php"><i class="fas fa-home"></i></a>
+
+</header>
 
 <form action="../controllers/ajoutClient.php" method="post"> 
 
 <input type="text" name="nom" placeholder="inserez le nom de votr client "> 
 
-<input type="text" name="prenom" placeholder="inserez le prenom de votr client "> 
+<input type="text" name="prenom" placeholder="inserez le prenom de votre client "> 
 
 <input type="text" name="telephone" placeholder="numéro de téléphone du client"> 
 
@@ -25,12 +35,12 @@
 
 <input type="text" name="codePostal" placeholder="codePostal du client"> 
 
-<input type="submit">
+<button class="bouton" type="submit"><span></span><span></span><span></span><span></span>Ajouter</button>
 
 
 </form>
 
-<a href="../controllers/pageConnecteeSociete.php">home</a>
+</section>
 
 </body>
 </html>
