@@ -21,7 +21,7 @@ modifListeFacture($_GET['id'],$_POST['datePaiement'],$_POST['commentaire'],$_POS
 $_POST['adresseFacturation'],$_POST['villeFacturation'],$_POST['codeFacturation'],$_POST['statut']);
 
 }
-var_dump($client,$_POST);
+//var_dump($client,$_POST);
 
 include "../views/modifList.phtml";
 

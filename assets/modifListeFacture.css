@@ -1,0 +1,174 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    min-height: 100px;   
+}
+
+header a{
+    position: absolute;
+    right: 20%;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+a i{
+    color: white;
+}
+
+
+#contener{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url(../assets/images/bgAjoutStock.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50vh;
+
+}
+
+form input{
+    font-family: 'Playfair Display', serif;
+    width: 400px;
+    max-width: 90%;
+    height: 50px;
+    margin:20px;
+    text-align: center;
+    border-radius: 5px;
+    border:#9e2121;
+    color: #9e2121;
+    border: 1px #9e2121 solid;
+}
+
+.bouton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: transparent;
+    width: 250px;
+    height: 60px;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: white;
+    margin: 50px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+ .statut{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 200px;
+ }
+  .bouton span {
+    position: absolute;
+    background-color:white;
+  }
+  
+  .bouton span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+  }
+  
+  .bouton:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+  }
+  
+  .bouton span:nth-child(2) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+  }
+  
+  .bouton:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s;
+  }
+  
+  .bouton span:nth-child(3) {
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s;
+  }
+  
+  .bouton:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.25s;
+  }
+  
+  .bouton span:nth-child(4) {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+  }
+  
+  .bouton:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.25s;
+  }
+  
+  .bouton:hover {
+    background-color: white;
+    color: #9e2121;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+  }
+
+
+  textarea{
+      resize: none;
+      width: 300px;
+      height: 100px;
+      font-family: 'Playfair Display', serif;
+  }
+
+ 
