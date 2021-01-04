@@ -4,7 +4,7 @@ include "../models/BDDmodifDetails.php";
 
 $modifDetailsFacture=modifDetailsFacture($_GET['id']);
 
-var_dump($modifDetailsFacture);
+//var_dump($modifDetailsFacture);
 
 require "../views/modifDetails.phtml";
 

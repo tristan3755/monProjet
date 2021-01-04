@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/creationFacture2.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2dc5983f48.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+
+
+<section id="contener">
+<header>
+    
+<a href="../controllers/pageConnecteeVendeur.php"><i class="fas fa-home"></i></a>
+
+</header>
 
 <form action="../controllers/creationFacture2.php?id=<?= $client['id_clients'] ?>" method="post">
 
 
 
-<Label for="datePaiement"> date de paiement prevu : </Label>
+
 <input type="date" name="datePaiement">
 
 <textarea name="commentaire"></textarea>
@@ -19,31 +31,31 @@
 <Label for="adresseLivraison">adresse de livraison :</Label>
 <input type="text" name="adresseLivraison" value="<?=htmlspecialchars($client['adresse'])?>">
 
-<Label for="villeLivraison">ville de livraison :</Label>
+
 <input type="text" name="villeLivraison" value="<?=htmlspecialchars($client['ville'])?>">
 
-<Label for="codeLivraison">code postal :</Label>
+
 <input type="text" name="codeLivraison" value="<?=htmlspecialchars($client['CodePostal'])?>">
 
 <Label for="adresseFacturation">adresse de facturation :</Label>
 <input type="text" name="adresseFacturation" value="<?=htmlspecialchars($client['adresse'])?>">
 
-<Label for="villeLivraison"> ville de facturation : </Label>
+
 <input type="text" name="villeFacturation" value="<?=htmlspecialchars($client['ville'])?>">
 
-<Label for="codeFacturation"> code postal :</Label>
-<input type="text" name="codeFacturation" value="<?=htmlspecialchars($client['CodePostal'])?>">
 
+<input type="text" name="codeFacturation" value="<?=htmlspecialchars($client['CodePostal'])?>">
+<div class="statut">
 <Label for="statut"> Facture payée ?</Label>
 <input type="checkBox" name="statut">
+</div>
 
 
-
-<input type="submit">
+<button class="bouton" type="submit"><span></span><span></span><span></span><span></span>Création</button>
 
 </form>
 
-
+</section>
 
 
 

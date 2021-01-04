@@ -26,7 +26,7 @@ if(!empty($_POST)){
   
 
 
-var_dump($_GET,$client,$client['id_societes'],$_POST);
+// var_dump($_GET,$client,$client['id_societes'],$_POST);
 
 include "../views/creationFacture2.phtml";
 
