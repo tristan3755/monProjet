@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/listeFactureClient.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/2dc5983f48.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    
+<section id="contener">
+<header>
+<a href="../controllers/pageConnecteeSociete.php"><i class="fas fa-home"></i></a>
+
+</header>    
+
+<section class="vendeur">
 <?php if(count($liste)>0) :?> 
 
 <h3><?=htmlspecialchars($liste['nom'])?></h3>
@@ -22,9 +32,9 @@
 <p><?= htmlspecialchars($liste['ville_facturation'])?></p>
 <p><?= htmlspecialchars($liste['codePostal_facturation'])?></p>
 
-<a href="../controllers/suppFacture.php?id=<?= intval($liste['id_facture'])?>">supprimer la facture</a>
-<a href="../controllers/modifListeFacture.php?id=<?= intval($liste['id_facture'])?>">modifier la facture</a>
-
+<a class="bouton" href="../controllers/suppFacture.php?id=<?= intval($liste['id_facture'])?>"> <span></span><span></span><span></span><span></span>supprimer la facture</a>
+<a class="bouton" href="../controllers/modifListeFacture.php?id=<?= intval($liste['id_facture'])?>"> <span></span><span></span><span></span><span></span>modifier la facture</a>
+<div class="border"></div>
 <h2>Les produits affectés à cette facture</h2>
 <?php if(count($objet)>0) :?>
 <?php foreach($objet as $objets) :?>
@@ -33,16 +43,19 @@
     <p>quantité:<?= htmlspecialchars($objets['quantite'])?></p>
     <p>prix unitaire: <?= htmlspecialchars($objets['prix_unitaire'])?> €</p>
     <p>TVA: <?= htmlspecialchars($objets['TVA'])?> %</p>
-    <a href="../controllers/modifProduitFactureDetails.php?id=<?= intval($objets['id_factureDetails']) ?>">modifier ce produit sur la facture</a>
-    <a href="../controllers/suppProduitFactureDetails.php?id=<?= intval($objets['id_factureDetails']) ?>">supprimer ce produit sur la facture</a>
+    <a class="bouton" href="../controllers/modifProduitFactureDetails.php?id=<?= intval($objets['id_factureDetails']) ?>"><span></span><span></span><span></span><span></span>modifier ce produit sur la facture</a>
+    <a class="bouton" href="../controllers/suppProduitFactureDetails.php?id=<?= intval($objets['id_factureDetails']) ?>"><span></span><span></span><span></span><span></span>supprimer ce produit sur la facture</a>
+    <div class="border"></div>
 <?php endforeach ?>
 <?php endif ?> 
 
-<a href="../controllers/ajoutProduitFacture.php?id=<?= intval($liste['id_facture']) ?> & idSoc=<?= intval($liste['id_societes']) ?>">ajouter des produits à cette facture</a>
+<a class="bouton" href="../controllers/ajoutProduitFacture.php?id=<?= intval($liste['id_facture']) ?> & idSoc=<?= intval($liste['id_societes']) ?>"><span></span><span></span><span></span><span></span>ajouter des produits à cette facture</a>
 
-<a href="../controllers/editionFacture.php?id=<?= intval($liste['id_facture']) ?>">éditer cette facture</a>
+<a class="bouton" href="../controllers/editionFacture.php?id=<?= intval($liste['id_facture']) ?>"><span></span><span></span><span></span><span></span>éditer cette facture</a>
 
 <?php endif ?> 
+</section>
+</section>
 
 </body>
 </html>

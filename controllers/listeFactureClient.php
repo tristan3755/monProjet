@@ -10,7 +10,7 @@ $objet=recupDetailFacture($liste['id_facture']);
 
 
 
-var_dump($_GET,$_SESSION,$liste,$objet);
+// var_dump($_GET,$_SESSION,$liste,$objet);
 
 include ('../views/listeFactureClient.phtml');
 
