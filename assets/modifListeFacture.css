@@ -86,6 +86,8 @@ form input{
      align-items: center;
      justify-content: center;
      width: 200px;
+     font-family: 'Playfair Display', serif;
+     color:white;
  }
   .bouton span {
     position: absolute;
@@ -169,6 +171,10 @@ form input{
       width: 300px;
       height: 100px;
       font-family: 'Playfair Display', serif;
+      margin-right: 20px;
   }
 
- 
+ label{
+    font-family: 'Playfair Display', serif;
+    color: white;
+ }
