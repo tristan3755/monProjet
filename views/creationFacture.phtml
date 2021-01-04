@@ -4,58 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/creationFacture.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/2dc5983f48.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
 
+<section id="contener">
+<header>
+<a href="../controllers/pageConnecteeSociete.php"><i class="fas fa-home"></i></a>
+
+</header>
 
 <?php if (count($infosClient) > 0) : ?>
 
    
-<section>
+<section  class="vendeur">
 
 <?php foreach ($infosClient as $client) : ?>
 
-<div>
+<div class="fiche">
 
         <h1> Fiche client </h1>
 
-    <h1>Nom:<?= htmlspecialchars($client['nom']) ?></h1>
+    <h1>Nom: <?= htmlspecialchars($client['nom']) ?></h1>
 
-    <h2>Prénom:<?= htmlspecialchars($client['prenom']) ?></h2>
+    <h2>Prénom: <?= htmlspecialchars($client['prenom']) ?></h2>
 
-    <h3>Référence:<?= htmlspecialchars($client['ref_client']) ?></h3>
+    <h3>Référence: <?= htmlspecialchars($client['ref_client']) ?></h3>
 
-    <p>téléphone:<?= htmlspecialchars($client['telephone']) ?></p>
+    <p>téléphone: <?= htmlspecialchars($client['telephone']) ?></p>
 
-    <p>email:<?= htmlspecialchars($client['email']) ?></p>
+    <p>email: <?= htmlspecialchars($client['email']) ?></p>
 
-    <p>adresse:<?= htmlspecialchars($client['adresse']) ?></p>
+    <p>adresse: <?= htmlspecialchars($client['adresse']) ?></p>
 
-    <p>ville:<?= htmlspecialchars($client['ville']) ?></p>
+    <p>ville: <?= htmlspecialchars($client['ville']) ?></p>
 
-    <p>code postal:<?= htmlspecialchars($client['CodePostal']) ?></p>
+    <p>code postal: <?= htmlspecialchars($client['CodePostal']) ?></p>
 
     <div>
 
     <h1>liste des facture appartenant au client</h1>
 
-    </div>
+    
     <?php if (count($client) > 0) : ?>
-<a href="../controllers/listeFactureClient.php?id=<?= intval($client['id_clients']) ?>">liste des factures pour ce client </a> 
+<a class="bouton" href="../controllers/listeFactureClient.php?id=<?= intval($client['id_clients']) ?>"><span></span><span></span><span></span><span></span>liste des factures pour ce client </a> 
 <?php endif ?>
-
-<br>
-<a href="../controllers/creationFacture2.php?id=<?= intval($client['id_clients']) ?>">créer une facture pour ce client </a> 
-
+<a class="bouton" href="../controllers/creationFacture2.php?id=<?= intval($client['id_clients']) ?>"><span></span><span></span><span></span><span></span>créer une facture pour ce client </a> 
+<div class="border"></div>
+</div>
 </div>
 
 <?php endforeach; ?>
+<?php endif ?>
 
 </section>
 
-<?php endif ?>
+</section>
 
 </body>
 
