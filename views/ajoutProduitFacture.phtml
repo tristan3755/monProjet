@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/ajoutProduitFacture.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/2dc5983f48.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
 
+<section id="contener">
+<header>
+<a href="../controllers/pageConnecteeSociete.php"><i class="fas fa-home"></i></a>
+
+</header>
 
 <form action="../controllers/recupObjetSelect.php" method="get">
 
@@ -24,19 +33,15 @@
 
 <select name="idFacture">
 
-    
 <option value="<?= intval($_GET['id'])?>"><?= htmlspecialchars($_GET['id'])?></option>
-
-
-
-
-
 </select>
 
 
-<input type="submit">
+<button class="bouton" type="submit"><span></span><span></span><span></span><span></span>Ajouter</button>
 
 </form>
+
+</section>
 
 <?php endif ?>
     

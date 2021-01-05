@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/recupObjetSelect.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/2dc5983f48.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
 
+
+<section id="contener">
+<header>
+<a href="../controllers/pageConnecteeSociete.php"><i class="fas fa-home"></i></a>
+
+</header>
 
 <h1>Produit selectioné: <?=$recupObjetSelect['nom_Produit']?> </h1>
 
@@ -30,7 +40,9 @@
 <option >20%</option>
 </select>
 
-<input type="submit" value="envoyer">
+<button class="bouton" type="submit"><span></span><span></span><span></span><span></span>Ajouter</button>
+
+</section>
 
 </form>
 </body>
