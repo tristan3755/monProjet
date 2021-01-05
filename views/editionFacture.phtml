@@ -16,18 +16,18 @@
 
 <article class="adresseSociete">
 
-<p><?= $recupEditionSociete['nom'] ?> <br> <?= $recupEditionSociete['adresse'] ?> <br> <?= $recupEditionSociete['telephone'] ?></p>
+<p><?= htmlspecialchars($recupEditionSociete['nom']) ?> <br> <?= htmlspecialchars($recupEditionSociete['adresse']) ?> <br> <?= htmlspecialchars($recupEditionSociete['telephone']) ?></p>
 
 </article>
 <article class="infosClients">
 <div>
 <h2>Facturé à</h2>
-<p><?= $recupEditionClient['nom'] ?> <br><?= $recupEditionClient['prenom'] ?> <br> <?= $recupEditionClient['ref_client'] ?> <br><?= $recupEdition[0]['adresse_facturation'] ?> <br><?= $recupEdition[0]['codePostal_facturation'] ?>  <br><?= $recupEdition[0]['ville_facturation'] ?>  <br> <?= $recupEditionClient['telephone'] ?></p>
+<p><?= htmlspecialchars($recupEditionClient['nom']) ?> <br><?= htmlspecialchars($recupEditionClient['prenom']) ?> <br> <?= htmlspecialchars($recupEditionClient['ref_client']) ?> <br><?= htmlspecialchars($recupEdition[0]['adresse_facturation']) ?> <br><?= htmlspecialchars($recupEdition[0]['codePostal_facturation']) ?>  <br><?= htmlspecialchars($recupEdition[0]['ville_facturation']) ?>  <br> <?= htmlspecialchars($recupEditionClient['telephone']) ?></p>
 </div>
 
 <div>
 <h2>Envoyé à</h2>
-<p>  <?= $recupEdition[0]['adresse_livraison'] ?> <br><?= $recupEdition[0]['codePostal_livraison'] ?><br><?= $recupEdition[0]['ville_livraison'] ?> </p>
+<p>  <?= htmlspecialchars($recupEdition[0]['adresse_livraison']) ?> <br><?= htmlspecialchars($recupEdition[0]['codePostal_livraison']) ?><br><?= htmlspecialchars($recupEdition[0]['ville_livraison']) ?> </p>
 </div>
 
 <div>
@@ -38,9 +38,9 @@
 
 
 <div>
-<h2><?= $recupEdition[0]['id_facture'] ?></h2>
-<h2><?= $recupEdition[0]['date_emission'] ?> </h2>
-<h2><?= $recupEdition[0]['date_paiement'] ?></h2>
+<h2><?= htmlspecialchars($recupEdition[0]['id_facture']) ?></h2>
+<h2><?= htmlspecialchars($recupEdition[0]['date_emission']) ?> </h2>
+<h2><?= htmlspecialchars($recupEdition[0]['date_paiement']) ?></h2>
 </div>
 
 </article>
@@ -58,10 +58,10 @@
 
 <article class="article">
 
-<h3><?= $recupEditions['quantite'] ?></h3>
-<h3><?= $recupEditions['nom'] ?></h3>
-<h3><?= $recupEditions['prix_unitaire'] ?>€</h3>
-<h3><?= $recupEditions['TVA'] ?>%</h3>
+<h3><?= htmlspecialchars($recupEditions['quantite']) ?></h3>
+<h3><?= htmlspecialchars($recupEditions['nom']) ?></h3>
+<h3><?= htmlspecialchars($recupEditions['prix_unitaire']) ?>€</h3>
+<h3><?= htmlspecialchars($recupEditions['TVA']) ?>%</h3>
 
 </article>
 
