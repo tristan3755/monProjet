@@ -2,7 +2,7 @@
 
 include "../models/BBDrecupObjetSelect.php";
 
-var_dump($_GET);
+// var_dump($_GET);
 
 
 if(!empty($_GET)){
@@ -12,7 +12,7 @@ if(!empty($_GET)){
 }
 
 
-var_dump($recupObjetSelect);
+// var_dump($recupObjetSelect);
 
 
 require "../views/recupObjetSelect.phtml"
