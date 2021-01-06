@@ -18,7 +18,7 @@
 
 </header>
 
-<h1>Produit selectioné: <?=$recupObjetSelect['nom_Produit']?> </h1>
+<h1>Produit selectioné: <?=htmlspecialchars($recupObjetSelect['nom_Produit'])?> </h1>
 
 
 <form method="post" action="../controllers/ajoutLigneFacture.php?idFacture=<?=$_GET["idFacture"] ?>">

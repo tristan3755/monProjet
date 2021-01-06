@@ -17,13 +17,13 @@
 
 </header>
     
-<form action='../controllers/modifDetails2.php?id=<?= $modifDetailsFacture['id_factureDetails'] ?>' method="post">
+<form action='../controllers/modifDetails2.php?id=<?= htmlspecialchars($modifDetailsFacture['id_factureDetails']) ?>' method="post">
 
-<input type="text" name="quantite" placeholder="inscrivez la quantité du produit" value="<?= $modifDetailsFacture['quantite'] ?>">
+<input type="text" name="quantite" placeholder="inscrivez la quantité du produit" value="<?= htmlspecialchars($modifDetailsFacture['quantite']) ?>">
 
-<input type="text" name="tva" placeholder="inscrivez la TVA" value="<?= $modifDetailsFacture['TVA'] ?>">
+<input type="text" name="tva" placeholder="inscrivez la TVA" value="<?= htmlspecialchars($modifDetailsFacture['TVA']) ?>">
 
-<input type="text" name="prixUnitaire" placeholder="inscrivez le prix unitaire" value="<?= $modifDetailsFacture['prix_unitaire'] ?>">
+<input type="text" name="prixUnitaire" placeholder="inscrivez le prix unitaire" value="<?= htmlspecialchars($modifDetailsFacture['prix_unitaire']) ?>">
 
 <button class="bouton" type="submit"><span></span><span></span><span></span><span></span>Modifier</button>
 
