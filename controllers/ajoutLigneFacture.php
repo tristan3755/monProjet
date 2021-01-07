@@ -2,7 +2,7 @@
 
 require "../models/BDDajoutLigneFacture.php";
 
-var_dump($_POST,$_GET);
+// var_dump($_POST,$_GET);
 
 if(!empty($_POST)&&!empty($_GET)){
 

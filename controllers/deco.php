@@ -5,7 +5,7 @@
 	session_start();
     unset($_SESSION['societeId']);
     
-    var_dump($_SESSION);
+     var_dump($_SESSION);
     
 	
   
