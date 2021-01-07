@@ -21,7 +21,7 @@
 <h1>Produit selectioné: <?=htmlspecialchars($recupObjetSelect['nom_Produit'])?> </h1>
 
 
-<form method="post" action="../controllers/ajoutLigneFacture.php?idFacture=<?=$_GET["idFacture"] ?>">
+<form method="post" action="../controllers/ajoutLigneFacture.php?idFacture=<?=htmlspecialchars($_GET["idFacture"]) ?>">
 
 <label for="nom">dénomination</label>
 <select name="nom">

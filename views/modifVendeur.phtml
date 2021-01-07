@@ -22,7 +22,7 @@
 <?php foreach($placeHolder as $holder) :?>
     
 
-<form action='../controllers/modifVendeur.php?id=<?= $_GET["id"] ?>' method="post">
+<form action='../controllers/modifVendeur.php?id=<?= htmlspecialchars($_GET["id"]) ?>' method="post">
 
 <input type="text" name="nom" value="<?= htmlspecialchars($holder['nom_vendeur']) ?>" placeholder="inscrivez le nom de votre employé ">
 

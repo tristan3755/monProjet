@@ -23,7 +23,7 @@
     
    
 
-<form action='../controllers/modifStock.php?id=<?= $_GET["id"] ?>' method="post">
+<form action='../controllers/modifStock.php?id=<?= htmlspecialchars($_GET["id"]) ?>' method="post">
 
 <input type="text" name="quantite" value="<?= htmlspecialchars($holder['quantite_stock'])?>" placeholder="inscrivez la quantité du produit">
 

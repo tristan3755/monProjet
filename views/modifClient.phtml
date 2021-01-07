@@ -16,7 +16,7 @@
 
 </header>
 
-<form action="../controllers/modifClient.php?id=<?= $_GET["id"] ?>" method="post"> 
+<form action="../controllers/modifClient.php?id=<?= htmlspecialchars($_GET["id"]) ?>" method="post"> 
 
 <?php foreach($placeHolder as $holder) :?>
 

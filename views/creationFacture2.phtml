@@ -19,7 +19,7 @@
 
 </header>
 
-<form action="../controllers/creationFacture2.php?id=<?= $client['id_clients'] ?>" method="post">
+<form action="../controllers/creationFacture2.php?id=<?= htmlspecialchars($client['id_clients']) ?>" method="post">
 
 
 

@@ -19,7 +19,7 @@
 </header>
 
 
-<form action="../controllers/modifListeFacture.php?id=<?= $client['id_facture'] ?>" method="post">
+<form action="../controllers/modifListeFacture.php?id=<?= htmlspecialchars($client['id_facture']) ?>" method="post">
 
 
 
