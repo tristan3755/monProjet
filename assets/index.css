@@ -275,6 +275,19 @@ header div span:nth-child(2){
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
+@media(max-width:400px){
+  
+
+ #qui article div{
+    height: 300px;
+  }
+
+  #qui article div:nth-child(2){
+    margin-bottom: 10px;
+  }
+
+}
+
 #qui article div:nth-child(1){
    
     background-image: url(../assets/images/facture.jpg);
