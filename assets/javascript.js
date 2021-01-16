@@ -2,6 +2,7 @@ window.addEventListener('load',(event)=>{
 
 header()
 
+
 })
 
 
@@ -11,3 +12,4 @@ function header(){
     monHeader.style.transition="2s"
     monHeader.style.opacity="1"
 }
+

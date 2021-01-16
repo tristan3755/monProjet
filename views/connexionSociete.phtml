@@ -6,6 +6,7 @@
     <link href="../assets/connexionSociete.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    
     <title>Document</title>
 </head>
 <body>
@@ -18,9 +19,17 @@
 
 <button type="submit" class="bouton"><span></span><span></span><span></span><span></span>Connexion</button>
 
+<?php if( !empty($_POST) AND $user==false):?>
+
+<p class="Login">identifiants incorrectes</p>
+
+<?php endif ?>
+
+
 
 </form>
 </section>
+
 
 
 </body>
