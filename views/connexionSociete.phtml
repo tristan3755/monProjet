@@ -21,11 +21,15 @@
 
 <?php if( !empty($_POST) AND $user==false):?>
 
-<p class="Login">identifiants incorrectes</p>
+<p class="Login">identifiant incorrecte</p>
 
 <?php endif ?>
 
+<?php if( !empty($_POST) AND $user==true AND !password_verify($_POST['password'].'nader',$user['hashedPassword'])):?>
 
+<p class="Login">password incorrecte</p>
+
+<?php endif ?>
 
 </form>
 </section>
