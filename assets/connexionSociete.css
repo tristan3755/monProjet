@@ -153,9 +153,10 @@ form input{
 
     from{
       opacity: 0;
+      width: 300px;
     }
     to{
       opacity: 1;
-    }
+      }
 
   }
