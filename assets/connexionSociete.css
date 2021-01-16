@@ -154,6 +154,7 @@ form input{
     from{
       opacity: 0;
       width: 300px;
+      height: 30px;
     }
     to{
       opacity: 1;
