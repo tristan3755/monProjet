@@ -177,7 +177,7 @@ header div span:nth-child(2){
     left: 18%;
     bottom: 30%;
     width: 150px;
-    max-width: 25%;
+    max-width: 23%;
     animation: tourneInverse 8s linear infinite;
 }
 
@@ -189,6 +189,7 @@ header div span:nth-child(2){
     max-width: 20%;
     animation: tourne 3s linear infinite;
 }
+
 
 
 @keyframes tourneInverse {
