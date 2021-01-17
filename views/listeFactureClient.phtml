@@ -17,7 +17,7 @@
 </header>    
 
 <section class="vendeur">
-<?php if(count($liste)>0) :?> 
+<?php /*if(count($liste)>0)*/ if($liste==!false) :?> 
 
 <h3><?=htmlspecialchars($liste['nom'])?></h3>
 <h4><?=htmlspecialchars($liste['prenom'])?></h4>
