@@ -10,7 +10,7 @@ if(!empty($_POST['nom']) AND !empty($_POST['adresse']) AND !empty($_POST['tel'])
 
 connectSociete($_POST['nom'],$_POST['adresse'],$_POST['tel'],password_hash($_POST['password'].'nader',PASSWORD_BCRYPT));
 
-header('location:../controllers/pageConnecteeSociete.php');
+header('location:../controllers/connexionSociete.php');
 exit;
 
 }
