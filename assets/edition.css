@@ -57,10 +57,36 @@ body{
 }
 
 .article h3{
-   margin-left: 50px;
-   width: 50px;
-   text-align: center;
+    margin-left: 50px;
+    width: 50px;
+    text-align: center;
+ }
+
+@media(max-width:650px){
+
+    h2{
+     font-size: 13px;
+     }
+    
+     h3{
+        font-size: 13px; 
+     }
+
+     p{
+        font-size: 10px;   
+     }
+
+     .nom>*{
+         margin: 0;
+     }
+
+     .article h3{
+        margin-left:0px;
+     }
+
 }
+
+
 .TTC{
     display: flex;
     flex-direction: column;
@@ -69,6 +95,7 @@ body{
    background-color: brown;
    margin-top: 200px;
    width: 400px;
+   max-width: 80%;
 
 }
 
@@ -78,4 +105,5 @@ body{
    align-self: flex-end;
    margin-top: 200px;
    width: 400px;
+   max-width: 80%;
 }
