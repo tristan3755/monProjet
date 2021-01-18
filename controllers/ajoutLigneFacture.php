@@ -7,6 +7,8 @@ require "../models/BDDajoutLigneFacture.php";
 if(!empty($_POST)&&!empty($_GET)){
 
 ajoutLigneFacture($_POST['nom'],$_POST['quantite'],$_POST['prix'],$_POST['tva'],$_GET['idFacture']);
+header('location:../controllers/creationFacture.php');
+exit;
 
 };
 
