@@ -21,6 +21,9 @@ if(!empty($_POST)){
     $_POST['adresseLivraison'],$_POST['villeLivraison'],$_POST['codeLivraison'],
     $_POST['adresseFacturation'],$_POST['villeFacturation'],$_POST['codeFacturation'],$_POST['statut'],$client['id_clients']);
 
+    header('location:../controllers/creationFacture.php');
+    exit;
+
 }
     
   

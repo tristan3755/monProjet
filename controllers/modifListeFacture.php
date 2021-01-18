@@ -19,7 +19,8 @@ $_POST['statut']=true;
 
 modifListeFacture($_GET['id'],$_POST['datePaiement'],$_POST['commentaire'],$_POST['adresseLivraison'],$_POST['villeLivraison'],$_POST['codeLivraison'],
 $_POST['adresseFacturation'],$_POST['villeFacturation'],$_POST['codeFacturation'],$_POST['statut']);
-
+header('location:../controllers/creationFacture.php');
+    exit;
 }
 //var_dump($client,$_POST);
 

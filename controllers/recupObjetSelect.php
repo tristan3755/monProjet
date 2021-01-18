@@ -8,7 +8,7 @@ include "../models/BBDrecupObjetSelect.php";
 if(!empty($_GET)){
 
     $recupObjetSelect=recupObjetSelect($_GET['idObjet']);
-    
+       
 }
 
 

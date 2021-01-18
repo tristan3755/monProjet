@@ -7,5 +7,8 @@ require "../models/BDDsuppFacture.php";
 
 supprimerListe($_GET['id']);
 
+header('location:../controllers/creationFacture.php');
+    exit;
+
 
 ?>
