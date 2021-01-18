@@ -14,6 +14,8 @@ if(!empty($_POST) && !empty($_GET)){
 
     }
 
+    header('location:../controllers/listeVendeur.php');
+    exit;
 
 } 
 

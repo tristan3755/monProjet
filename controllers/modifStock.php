@@ -6,6 +6,8 @@ if(!empty($_POST) && !empty($_GET)){
 
 modif($_GET['id'],$_POST['quantite'],$_POST['nom'],$_POST['ref'],$_POST['prixUnitaire']);
 
+header('location:../controllers/listeStock.php');
+    exit;
 
 }
 
